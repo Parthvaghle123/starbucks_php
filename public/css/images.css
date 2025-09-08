@@ -1,0 +1,88 @@
+/* Images box Design */
+#root {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin-top: 25px;
+}
+
+.img-box1 {
+  width: 100%;
+  height: 105px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.images {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px;
+}
+h6 {
+  font-size: 16px;
+  color: black;
+  align-items: center;
+  margin-top: 5px;
+  font-weight: bold;
+}
+.images:hover {
+  border: 2px solid green;
+}
+
+@media (min-width: 768px) {
+  #root {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (min-width: 2560px) {
+  #root {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  #root {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .img-box1 {
+    width: 100%;
+    height: 90px;
+  }
+  h6 {
+    font-size: 15px;
+  }
+}
+@media (min-width: 1440px) {
+  #root {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .img-box1 {
+    width: 100%;
+    height: 120px;
+  }
+  h6 {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1024px) {
+  #root {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+@media screen and (max-width: 992px) {
+  .img-box1 {
+    width: 100%; /* makes the image container take full width */
+    max-height: 90px !important; /* restricts height */
+    object-fit: cover; /* ensures the image scales nicely */
+  }
+
+  h6 {
+    font-size: 14px; /* smaller heading size for narrow screens */
+    line-height: 1.4; /* optional for better readability */
+  }
+}

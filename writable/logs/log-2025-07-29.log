@@ -1,0 +1,730 @@
+DEBUG - 2025-07-29 05:42:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 05:42:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 05:42:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 05:42:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 05:42:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 05:42:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 05:42:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 05:42:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 05:43:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 05:43:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 05:44:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 05:45:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 05:46:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 05:52:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 05:52:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+ERROR - 2025-07-29 11:04:44 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\codeigniter4_basics\system\Database\MySQLi\Connection.php:202
+Stack trace:
+#0 C:\xampp\htdocs\codeigniter4_basics\system\Database\MySQLi\Connection.php(202): mysqli->real_connect('localhost', 'root', '', 'parth', 3306, '', 0)
+#1 C:\xampp\htdocs\codeigniter4_basics\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\codeigniter4_basics\system\Session\Handlers\DatabaseHandler.php(100): CodeIgniter\Database\BaseConnection->initialize()
+#3 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->open('ci_sessions', 'ci_session')
+#4 C:\xampp\htdocs\codeigniter4_basics\system\Session\Session.php(912): session_start()
+#5 C:\xampp\htdocs\codeigniter4_basics\system\Session\Session.php(243): CodeIgniter\Session\Session->startSession()
+#6 C:\xampp\htdocs\codeigniter4_basics\system\Config\Services.php(710): CodeIgniter\Session\Session->start()
+#7 C:\xampp\htdocs\codeigniter4_basics\system\Config\BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+#8 C:\xampp\htdocs\codeigniter4_basics\system\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#9 C:\xampp\htdocs\codeigniter4_basics\system\Config\Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#10 C:\xampp\htdocs\codeigniter4_basics\system\Config\BaseService.php(321): CodeIgniter\Config\Services::session()
+#11 C:\xampp\htdocs\codeigniter4_basics\system\Config\BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#12 C:\xampp\htdocs\codeigniter4_basics\system\Common.php(1000): CodeIgniter\Config\BaseService::get('session')
+#13 C:\xampp\htdocs\codeigniter4_basics\system\Common.php(973): service('session')
+#14 C:\xampp\htdocs\codeigniter4_basics\app\Controllers\BaseController.php(57): session()
+#15 C:\xampp\htdocs\codeigniter4_basics\system\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#16 C:\xampp\htdocs\codeigniter4_basics\system\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+#17 C:\xampp\htdocs\codeigniter4_basics\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#18 C:\xampp\htdocs\codeigniter4_basics\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#19 C:\xampp\htdocs\codeigniter4_basics\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#20 C:\xampp\htdocs\codeigniter4_basics\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#21 C:\xampp\htdocs\codeigniter4_basics\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#22 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\codeigniter4_basics\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\codeigniter4_basics\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\codeigniter4_basics\system\Session\Handlers\DatabaseHandler.php(100): CodeIgniter\Database\BaseConnection->initialize()
+#2 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->open('ci_sessions', 'ci_session')
+#3 C:\xampp\htdocs\codeigniter4_basics\system\Session\Session.php(912): session_start()
+#4 C:\xampp\htdocs\codeigniter4_basics\system\Session\Session.php(243): CodeIgniter\Session\Session->startSession()
+#5 C:\xampp\htdocs\codeigniter4_basics\system\Config\Services.php(710): CodeIgniter\Session\Session->start()
+#6 C:\xampp\htdocs\codeigniter4_basics\system\Config\BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+#7 C:\xampp\htdocs\codeigniter4_basics\system\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#8 C:\xampp\htdocs\codeigniter4_basics\system\Config\Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#9 C:\xampp\htdocs\codeigniter4_basics\system\Config\BaseService.php(321): CodeIgniter\Config\Services::session()
+#10 C:\xampp\htdocs\codeigniter4_basics\system\Config\BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#11 C:\xampp\htdocs\codeigniter4_basics\system\Common.php(1000): CodeIgniter\Config\BaseService::get('session')
+#12 C:\xampp\htdocs\codeigniter4_basics\system\Common.php(973): service('session')
+#13 C:\xampp\htdocs\codeigniter4_basics\app\Controllers\BaseController.php(57): session()
+#14 C:\xampp\htdocs\codeigniter4_basics\system\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#15 C:\xampp\htdocs\codeigniter4_basics\system\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+#16 C:\xampp\htdocs\codeigniter4_basics\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#17 C:\xampp\htdocs\codeigniter4_basics\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#18 C:\xampp\htdocs\codeigniter4_basics\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#19 C:\xampp\htdocs\codeigniter4_basics\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#20 C:\xampp\htdocs\codeigniter4_basics\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#21 {main}
+CRITICAL - 2025-07-29 11:04:44 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Session\Handlers\DatabaseHandler.php(100): CodeIgniter\Database\BaseConnection->initialize()
+ 2 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->open('ci_sessions', 'ci_session')
+ 3 SYSTEMPATH\Session\Session.php(912): session_start()
+ 4 SYSTEMPATH\Session\Session.php(243): CodeIgniter\Session\Session->startSession()
+ 5 SYSTEMPATH\Config\Services.php(710): CodeIgniter\Session\Session->start()
+ 6 SYSTEMPATH\Config\BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+ 7 SYSTEMPATH\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 8 SYSTEMPATH\Config\Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 9 SYSTEMPATH\Config\BaseService.php(321): CodeIgniter\Config\Services::session()
+10 SYSTEMPATH\Config\BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic('session', [])
+11 SYSTEMPATH\Common.php(1000): CodeIgniter\Config\BaseService::get('session')
+12 SYSTEMPATH\Common.php(973): service('session')
+13 APPPATH\Controllers\BaseController.php(57): session()
+14 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+15 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+16 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+18 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+19 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+20 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\codeigniter4_basics\\public\\index.php')
+DEBUG - 2025-07-29 11:05:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:05:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:05:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:05:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+ERROR - 2025-07-29 11:05:48 --> mysqli_sql_exception: No database selected in C:\xampp\htdocs\codeigniter4_basics\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\codeigniter4_basics\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `data`\nF...', 0)
+#1 C:\xampp\htdocs\codeigniter4_basics\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `data`\nF...')
+#2 C:\xampp\htdocs\codeigniter4_basics\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `data`\nF...')
+#3 C:\xampp\htdocs\codeigniter4_basics\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `data`\nF...', Array, false)
+#4 C:\xampp\htdocs\codeigniter4_basics\system\Session\Handlers\DatabaseHandler.php(135): CodeIgniter\Database\BaseBuilder->get()
+#5 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->read('d773d2ab5c76a9a...')
+#6 C:\xampp\htdocs\codeigniter4_basics\system\Session\Session.php(912): session_start()
+#7 C:\xampp\htdocs\codeigniter4_basics\system\Session\Session.php(243): CodeIgniter\Session\Session->startSession()
+#8 C:\xampp\htdocs\codeigniter4_basics\system\Config\Services.php(710): CodeIgniter\Session\Session->start()
+#9 C:\xampp\htdocs\codeigniter4_basics\system\Config\BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+#10 C:\xampp\htdocs\codeigniter4_basics\system\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#11 C:\xampp\htdocs\codeigniter4_basics\system\Config\Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#12 C:\xampp\htdocs\codeigniter4_basics\system\Config\BaseService.php(321): CodeIgniter\Config\Services::session()
+#13 C:\xampp\htdocs\codeigniter4_basics\system\Config\BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#14 C:\xampp\htdocs\codeigniter4_basics\system\Common.php(1000): CodeIgniter\Config\BaseService::get('session')
+#15 C:\xampp\htdocs\codeigniter4_basics\system\Common.php(973): service('session')
+#16 C:\xampp\htdocs\codeigniter4_basics\app\Controllers\BaseController.php(57): session()
+#17 C:\xampp\htdocs\codeigniter4_basics\system\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#18 C:\xampp\htdocs\codeigniter4_basics\system\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+#19 C:\xampp\htdocs\codeigniter4_basics\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#20 C:\xampp\htdocs\codeigniter4_basics\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#21 C:\xampp\htdocs\codeigniter4_basics\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#22 C:\xampp\htdocs\codeigniter4_basics\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#23 C:\xampp\htdocs\codeigniter4_basics\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#24 {main}
+CRITICAL - 2025-07-29 11:05:48 --> CodeIgniter\Database\Exceptions\DatabaseException: No database selected
+[Method: GET, Route: dashboard]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `data`
+FROM `ci_sessions`
+WHERE `id` = :id:', [...], false)
+ 2 SYSTEMPATH\Session\Handlers\DatabaseHandler.php(135): CodeIgniter\Database\BaseBuilder->get()
+ 3 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->read('d773d2ab5c76a9a537804350dcd0cf5b')
+ 4 SYSTEMPATH\Session\Session.php(912): session_start()
+ 5 SYSTEMPATH\Session\Session.php(243): CodeIgniter\Session\Session->startSession()
+ 6 SYSTEMPATH\Config\Services.php(710): CodeIgniter\Session\Session->start()
+ 7 SYSTEMPATH\Config\BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+ 8 SYSTEMPATH\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 9 SYSTEMPATH\Config\Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+10 SYSTEMPATH\Config\BaseService.php(321): CodeIgniter\Config\Services::session()
+11 SYSTEMPATH\Config\BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic('session', [])
+12 SYSTEMPATH\Common.php(1000): CodeIgniter\Config\BaseService::get('session')
+13 SYSTEMPATH\Common.php(973): service('session')
+14 APPPATH\Controllers\BaseController.php(57): session()
+15 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+16 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+17 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+18 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+19 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+20 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+21 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\codeigniter4_basics\\public\\index.php')
+CRITICAL - 2025-07-29 11:05:48 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: No database selected
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `data`
+FROM `ci_sessions`
+WHERE `id` = \'ci_session:d773d2ab5c76a9a537804350dcd0cf5b\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `data`
+FROM `ci_sessions`
+WHERE `id` = \'ci_session:d773d2ab5c76a9a537804350dcd0cf5b\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `data`
+FROM `ci_sessions`
+WHERE `id` = :id:', [...], false)
+ 4 SYSTEMPATH\Session\Handlers\DatabaseHandler.php(135): CodeIgniter\Database\BaseBuilder->get()
+ 5 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->read('d773d2ab5c76a9a537804350dcd0cf5b')
+ 6 SYSTEMPATH\Session\Session.php(912): session_start()
+ 7 SYSTEMPATH\Session\Session.php(243): CodeIgniter\Session\Session->startSession()
+ 8 SYSTEMPATH\Config\Services.php(710): CodeIgniter\Session\Session->start()
+ 9 SYSTEMPATH\Config\BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+10 SYSTEMPATH\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+11 SYSTEMPATH\Config\Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+12 SYSTEMPATH\Config\BaseService.php(321): CodeIgniter\Config\Services::session()
+13 SYSTEMPATH\Config\BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic('session', [])
+14 SYSTEMPATH\Common.php(1000): CodeIgniter\Config\BaseService::get('session')
+15 SYSTEMPATH\Common.php(973): service('session')
+16 APPPATH\Controllers\BaseController.php(57): session()
+17 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+18 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+19 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+20 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+21 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+22 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+23 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\codeigniter4_basics\\public\\index.php')
+CRITICAL - 2025-07-29 11:05:48 --> [Caused by] mysqli_sql_exception: No database selected
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `data`
+FROM `ci_sessions`
+WHERE `id` = \'ci_session:d773d2ab5c76a9a537804350dcd0cf5b\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `data`
+FROM `ci_sessions`
+WHERE `id` = \'ci_session:d773d2ab5c76a9a537804350dcd0cf5b\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `data`
+FROM `ci_sessions`
+WHERE `id` = \'ci_session:d773d2ab5c76a9a537804350dcd0cf5b\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `data`
+FROM `ci_sessions`
+WHERE `id` = :id:', [...], false)
+ 5 SYSTEMPATH\Session\Handlers\DatabaseHandler.php(135): CodeIgniter\Database\BaseBuilder->get()
+ 6 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->read('d773d2ab5c76a9a537804350dcd0cf5b')
+ 7 SYSTEMPATH\Session\Session.php(912): session_start()
+ 8 SYSTEMPATH\Session\Session.php(243): CodeIgniter\Session\Session->startSession()
+ 9 SYSTEMPATH\Config\Services.php(710): CodeIgniter\Session\Session->start()
+10 SYSTEMPATH\Config\BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+11 SYSTEMPATH\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+12 SYSTEMPATH\Config\Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+13 SYSTEMPATH\Config\BaseService.php(321): CodeIgniter\Config\Services::session()
+14 SYSTEMPATH\Config\BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic('session', [])
+15 SYSTEMPATH\Common.php(1000): CodeIgniter\Config\BaseService::get('session')
+16 SYSTEMPATH\Common.php(973): service('session')
+17 APPPATH\Controllers\BaseController.php(57): session()
+18 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+19 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+20 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+21 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+22 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+23 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+24 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\codeigniter4_basics\\public\\index.php')
+DEBUG - 2025-07-29 11:06:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+ERROR - 2025-07-29 11:06:43 --> mysqli_sql_exception: No database selected in C:\xampp\htdocs\codeigniter4_basics\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\codeigniter4_basics\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `data`\nF...', 0)
+#1 C:\xampp\htdocs\codeigniter4_basics\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `data`\nF...')
+#2 C:\xampp\htdocs\codeigniter4_basics\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `data`\nF...')
+#3 C:\xampp\htdocs\codeigniter4_basics\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `data`\nF...', Array, false)
+#4 C:\xampp\htdocs\codeigniter4_basics\system\Session\Handlers\DatabaseHandler.php(135): CodeIgniter\Database\BaseBuilder->get()
+#5 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->read('d773d2ab5c76a9a...')
+#6 C:\xampp\htdocs\codeigniter4_basics\system\Session\Session.php(912): session_start()
+#7 C:\xampp\htdocs\codeigniter4_basics\system\Session\Session.php(243): CodeIgniter\Session\Session->startSession()
+#8 C:\xampp\htdocs\codeigniter4_basics\system\Config\Services.php(710): CodeIgniter\Session\Session->start()
+#9 C:\xampp\htdocs\codeigniter4_basics\system\Config\BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+#10 C:\xampp\htdocs\codeigniter4_basics\system\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#11 C:\xampp\htdocs\codeigniter4_basics\system\Config\Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#12 C:\xampp\htdocs\codeigniter4_basics\system\Config\BaseService.php(321): CodeIgniter\Config\Services::session()
+#13 C:\xampp\htdocs\codeigniter4_basics\system\Config\BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#14 C:\xampp\htdocs\codeigniter4_basics\system\Common.php(1000): CodeIgniter\Config\BaseService::get('session')
+#15 C:\xampp\htdocs\codeigniter4_basics\system\Common.php(973): service('session')
+#16 C:\xampp\htdocs\codeigniter4_basics\app\Controllers\BaseController.php(57): session()
+#17 C:\xampp\htdocs\codeigniter4_basics\system\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#18 C:\xampp\htdocs\codeigniter4_basics\system\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+#19 C:\xampp\htdocs\codeigniter4_basics\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#20 C:\xampp\htdocs\codeigniter4_basics\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#21 C:\xampp\htdocs\codeigniter4_basics\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#22 C:\xampp\htdocs\codeigniter4_basics\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#23 C:\xampp\htdocs\codeigniter4_basics\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#24 {main}
+CRITICAL - 2025-07-29 11:06:43 --> CodeIgniter\Database\Exceptions\DatabaseException: No database selected
+[Method: GET, Route: dashboard]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `data`
+FROM `ci_sessions`
+WHERE `id` = :id:', [...], false)
+ 2 SYSTEMPATH\Session\Handlers\DatabaseHandler.php(135): CodeIgniter\Database\BaseBuilder->get()
+ 3 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->read('d773d2ab5c76a9a537804350dcd0cf5b')
+ 4 SYSTEMPATH\Session\Session.php(912): session_start()
+ 5 SYSTEMPATH\Session\Session.php(243): CodeIgniter\Session\Session->startSession()
+ 6 SYSTEMPATH\Config\Services.php(710): CodeIgniter\Session\Session->start()
+ 7 SYSTEMPATH\Config\BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+ 8 SYSTEMPATH\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 9 SYSTEMPATH\Config\Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+10 SYSTEMPATH\Config\BaseService.php(321): CodeIgniter\Config\Services::session()
+11 SYSTEMPATH\Config\BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic('session', [])
+12 SYSTEMPATH\Common.php(1000): CodeIgniter\Config\BaseService::get('session')
+13 SYSTEMPATH\Common.php(973): service('session')
+14 APPPATH\Controllers\BaseController.php(57): session()
+15 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+16 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+17 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+18 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+19 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+20 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+21 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\codeigniter4_basics\\public\\index.php')
+CRITICAL - 2025-07-29 11:06:43 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: No database selected
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `data`
+FROM `ci_sessions`
+WHERE `id` = \'ci_session:d773d2ab5c76a9a537804350dcd0cf5b\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `data`
+FROM `ci_sessions`
+WHERE `id` = \'ci_session:d773d2ab5c76a9a537804350dcd0cf5b\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `data`
+FROM `ci_sessions`
+WHERE `id` = :id:', [...], false)
+ 4 SYSTEMPATH\Session\Handlers\DatabaseHandler.php(135): CodeIgniter\Database\BaseBuilder->get()
+ 5 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->read('d773d2ab5c76a9a537804350dcd0cf5b')
+ 6 SYSTEMPATH\Session\Session.php(912): session_start()
+ 7 SYSTEMPATH\Session\Session.php(243): CodeIgniter\Session\Session->startSession()
+ 8 SYSTEMPATH\Config\Services.php(710): CodeIgniter\Session\Session->start()
+ 9 SYSTEMPATH\Config\BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+10 SYSTEMPATH\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+11 SYSTEMPATH\Config\Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+12 SYSTEMPATH\Config\BaseService.php(321): CodeIgniter\Config\Services::session()
+13 SYSTEMPATH\Config\BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic('session', [])
+14 SYSTEMPATH\Common.php(1000): CodeIgniter\Config\BaseService::get('session')
+15 SYSTEMPATH\Common.php(973): service('session')
+16 APPPATH\Controllers\BaseController.php(57): session()
+17 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+18 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+19 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+20 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+21 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+22 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+23 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\codeigniter4_basics\\public\\index.php')
+CRITICAL - 2025-07-29 11:06:43 --> [Caused by] mysqli_sql_exception: No database selected
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `data`
+FROM `ci_sessions`
+WHERE `id` = \'ci_session:d773d2ab5c76a9a537804350dcd0cf5b\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `data`
+FROM `ci_sessions`
+WHERE `id` = \'ci_session:d773d2ab5c76a9a537804350dcd0cf5b\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `data`
+FROM `ci_sessions`
+WHERE `id` = \'ci_session:d773d2ab5c76a9a537804350dcd0cf5b\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `data`
+FROM `ci_sessions`
+WHERE `id` = :id:', [...], false)
+ 5 SYSTEMPATH\Session\Handlers\DatabaseHandler.php(135): CodeIgniter\Database\BaseBuilder->get()
+ 6 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->read('d773d2ab5c76a9a537804350dcd0cf5b')
+ 7 SYSTEMPATH\Session\Session.php(912): session_start()
+ 8 SYSTEMPATH\Session\Session.php(243): CodeIgniter\Session\Session->startSession()
+ 9 SYSTEMPATH\Config\Services.php(710): CodeIgniter\Session\Session->start()
+10 SYSTEMPATH\Config\BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+11 SYSTEMPATH\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+12 SYSTEMPATH\Config\Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+13 SYSTEMPATH\Config\BaseService.php(321): CodeIgniter\Config\Services::session()
+14 SYSTEMPATH\Config\BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic('session', [])
+15 SYSTEMPATH\Common.php(1000): CodeIgniter\Config\BaseService::get('session')
+16 SYSTEMPATH\Common.php(973): service('session')
+17 APPPATH\Controllers\BaseController.php(57): session()
+18 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+19 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+20 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+21 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+22 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+23 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+24 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\codeigniter4_basics\\public\\index.php')
+ERROR - 2025-07-29 11:06:45 --> mysqli_sql_exception: No database selected in C:\xampp\htdocs\codeigniter4_basics\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\codeigniter4_basics\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `data`\nF...', 0)
+#1 C:\xampp\htdocs\codeigniter4_basics\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `data`\nF...')
+#2 C:\xampp\htdocs\codeigniter4_basics\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `data`\nF...')
+#3 C:\xampp\htdocs\codeigniter4_basics\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `data`\nF...', Array, false)
+#4 C:\xampp\htdocs\codeigniter4_basics\system\Session\Handlers\DatabaseHandler.php(135): CodeIgniter\Database\BaseBuilder->get()
+#5 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->read('d773d2ab5c76a9a...')
+#6 C:\xampp\htdocs\codeigniter4_basics\system\Session\Session.php(912): session_start()
+#7 C:\xampp\htdocs\codeigniter4_basics\system\Session\Session.php(243): CodeIgniter\Session\Session->startSession()
+#8 C:\xampp\htdocs\codeigniter4_basics\system\Config\Services.php(710): CodeIgniter\Session\Session->start()
+#9 C:\xampp\htdocs\codeigniter4_basics\system\Config\BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+#10 C:\xampp\htdocs\codeigniter4_basics\system\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#11 C:\xampp\htdocs\codeigniter4_basics\system\Config\Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#12 C:\xampp\htdocs\codeigniter4_basics\system\Config\BaseService.php(321): CodeIgniter\Config\Services::session()
+#13 C:\xampp\htdocs\codeigniter4_basics\system\Config\BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#14 C:\xampp\htdocs\codeigniter4_basics\system\Common.php(1000): CodeIgniter\Config\BaseService::get('session')
+#15 C:\xampp\htdocs\codeigniter4_basics\system\Common.php(973): service('session')
+#16 C:\xampp\htdocs\codeigniter4_basics\app\Controllers\BaseController.php(57): session()
+#17 C:\xampp\htdocs\codeigniter4_basics\system\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#18 C:\xampp\htdocs\codeigniter4_basics\system\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+#19 C:\xampp\htdocs\codeigniter4_basics\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#20 C:\xampp\htdocs\codeigniter4_basics\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#21 C:\xampp\htdocs\codeigniter4_basics\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#22 C:\xampp\htdocs\codeigniter4_basics\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#23 C:\xampp\htdocs\codeigniter4_basics\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#24 {main}
+CRITICAL - 2025-07-29 11:06:45 --> CodeIgniter\Database\Exceptions\DatabaseException: No database selected
+[Method: GET, Route: dashboard]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `data`
+FROM `ci_sessions`
+WHERE `id` = :id:', [...], false)
+ 2 SYSTEMPATH\Session\Handlers\DatabaseHandler.php(135): CodeIgniter\Database\BaseBuilder->get()
+ 3 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->read('d773d2ab5c76a9a537804350dcd0cf5b')
+ 4 SYSTEMPATH\Session\Session.php(912): session_start()
+ 5 SYSTEMPATH\Session\Session.php(243): CodeIgniter\Session\Session->startSession()
+ 6 SYSTEMPATH\Config\Services.php(710): CodeIgniter\Session\Session->start()
+ 7 SYSTEMPATH\Config\BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+ 8 SYSTEMPATH\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 9 SYSTEMPATH\Config\Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+10 SYSTEMPATH\Config\BaseService.php(321): CodeIgniter\Config\Services::session()
+11 SYSTEMPATH\Config\BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic('session', [])
+12 SYSTEMPATH\Common.php(1000): CodeIgniter\Config\BaseService::get('session')
+13 SYSTEMPATH\Common.php(973): service('session')
+14 APPPATH\Controllers\BaseController.php(57): session()
+15 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+16 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+17 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+18 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+19 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+20 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+21 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\codeigniter4_basics\\public\\index.php')
+CRITICAL - 2025-07-29 11:06:45 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: No database selected
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `data`
+FROM `ci_sessions`
+WHERE `id` = \'ci_session:d773d2ab5c76a9a537804350dcd0cf5b\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `data`
+FROM `ci_sessions`
+WHERE `id` = \'ci_session:d773d2ab5c76a9a537804350dcd0cf5b\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `data`
+FROM `ci_sessions`
+WHERE `id` = :id:', [...], false)
+ 4 SYSTEMPATH\Session\Handlers\DatabaseHandler.php(135): CodeIgniter\Database\BaseBuilder->get()
+ 5 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->read('d773d2ab5c76a9a537804350dcd0cf5b')
+ 6 SYSTEMPATH\Session\Session.php(912): session_start()
+ 7 SYSTEMPATH\Session\Session.php(243): CodeIgniter\Session\Session->startSession()
+ 8 SYSTEMPATH\Config\Services.php(710): CodeIgniter\Session\Session->start()
+ 9 SYSTEMPATH\Config\BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+10 SYSTEMPATH\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+11 SYSTEMPATH\Config\Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+12 SYSTEMPATH\Config\BaseService.php(321): CodeIgniter\Config\Services::session()
+13 SYSTEMPATH\Config\BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic('session', [])
+14 SYSTEMPATH\Common.php(1000): CodeIgniter\Config\BaseService::get('session')
+15 SYSTEMPATH\Common.php(973): service('session')
+16 APPPATH\Controllers\BaseController.php(57): session()
+17 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+18 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+19 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+20 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+21 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+22 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+23 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\codeigniter4_basics\\public\\index.php')
+CRITICAL - 2025-07-29 11:06:45 --> [Caused by] mysqli_sql_exception: No database selected
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `data`
+FROM `ci_sessions`
+WHERE `id` = \'ci_session:d773d2ab5c76a9a537804350dcd0cf5b\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `data`
+FROM `ci_sessions`
+WHERE `id` = \'ci_session:d773d2ab5c76a9a537804350dcd0cf5b\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `data`
+FROM `ci_sessions`
+WHERE `id` = \'ci_session:d773d2ab5c76a9a537804350dcd0cf5b\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `data`
+FROM `ci_sessions`
+WHERE `id` = :id:', [...], false)
+ 5 SYSTEMPATH\Session\Handlers\DatabaseHandler.php(135): CodeIgniter\Database\BaseBuilder->get()
+ 6 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->read('d773d2ab5c76a9a537804350dcd0cf5b')
+ 7 SYSTEMPATH\Session\Session.php(912): session_start()
+ 8 SYSTEMPATH\Session\Session.php(243): CodeIgniter\Session\Session->startSession()
+ 9 SYSTEMPATH\Config\Services.php(710): CodeIgniter\Session\Session->start()
+10 SYSTEMPATH\Config\BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+11 SYSTEMPATH\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+12 SYSTEMPATH\Config\Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+13 SYSTEMPATH\Config\BaseService.php(321): CodeIgniter\Config\Services::session()
+14 SYSTEMPATH\Config\BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic('session', [])
+15 SYSTEMPATH\Common.php(1000): CodeIgniter\Config\BaseService::get('session')
+16 SYSTEMPATH\Common.php(973): service('session')
+17 APPPATH\Controllers\BaseController.php(57): session()
+18 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+19 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+20 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+21 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+22 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+23 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+24 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\codeigniter4_basics\\public\\index.php')
+ERROR - 2025-07-29 11:06:45 --> mysqli_sql_exception: No database selected in C:\xampp\htdocs\codeigniter4_basics\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\codeigniter4_basics\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `data`\nF...', 0)
+#1 C:\xampp\htdocs\codeigniter4_basics\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `data`\nF...')
+#2 C:\xampp\htdocs\codeigniter4_basics\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `data`\nF...')
+#3 C:\xampp\htdocs\codeigniter4_basics\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `data`\nF...', Array, false)
+#4 C:\xampp\htdocs\codeigniter4_basics\system\Session\Handlers\DatabaseHandler.php(135): CodeIgniter\Database\BaseBuilder->get()
+#5 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->read('d773d2ab5c76a9a...')
+#6 C:\xampp\htdocs\codeigniter4_basics\system\Session\Session.php(912): session_start()
+#7 C:\xampp\htdocs\codeigniter4_basics\system\Session\Session.php(243): CodeIgniter\Session\Session->startSession()
+#8 C:\xampp\htdocs\codeigniter4_basics\system\Config\Services.php(710): CodeIgniter\Session\Session->start()
+#9 C:\xampp\htdocs\codeigniter4_basics\system\Config\BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+#10 C:\xampp\htdocs\codeigniter4_basics\system\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#11 C:\xampp\htdocs\codeigniter4_basics\system\Config\Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#12 C:\xampp\htdocs\codeigniter4_basics\system\Config\BaseService.php(321): CodeIgniter\Config\Services::session()
+#13 C:\xampp\htdocs\codeigniter4_basics\system\Config\BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#14 C:\xampp\htdocs\codeigniter4_basics\system\Common.php(1000): CodeIgniter\Config\BaseService::get('session')
+#15 C:\xampp\htdocs\codeigniter4_basics\system\Common.php(973): service('session')
+#16 C:\xampp\htdocs\codeigniter4_basics\app\Controllers\BaseController.php(57): session()
+#17 C:\xampp\htdocs\codeigniter4_basics\system\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#18 C:\xampp\htdocs\codeigniter4_basics\system\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+#19 C:\xampp\htdocs\codeigniter4_basics\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#20 C:\xampp\htdocs\codeigniter4_basics\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#21 C:\xampp\htdocs\codeigniter4_basics\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#22 C:\xampp\htdocs\codeigniter4_basics\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#23 C:\xampp\htdocs\codeigniter4_basics\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#24 {main}
+CRITICAL - 2025-07-29 11:06:45 --> CodeIgniter\Database\Exceptions\DatabaseException: No database selected
+[Method: GET, Route: dashboard]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `data`
+FROM `ci_sessions`
+WHERE `id` = :id:', [...], false)
+ 2 SYSTEMPATH\Session\Handlers\DatabaseHandler.php(135): CodeIgniter\Database\BaseBuilder->get()
+ 3 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->read('d773d2ab5c76a9a537804350dcd0cf5b')
+ 4 SYSTEMPATH\Session\Session.php(912): session_start()
+ 5 SYSTEMPATH\Session\Session.php(243): CodeIgniter\Session\Session->startSession()
+ 6 SYSTEMPATH\Config\Services.php(710): CodeIgniter\Session\Session->start()
+ 7 SYSTEMPATH\Config\BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+ 8 SYSTEMPATH\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 9 SYSTEMPATH\Config\Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+10 SYSTEMPATH\Config\BaseService.php(321): CodeIgniter\Config\Services::session()
+11 SYSTEMPATH\Config\BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic('session', [])
+12 SYSTEMPATH\Common.php(1000): CodeIgniter\Config\BaseService::get('session')
+13 SYSTEMPATH\Common.php(973): service('session')
+14 APPPATH\Controllers\BaseController.php(57): session()
+15 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+16 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+17 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+18 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+19 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+20 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+21 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\codeigniter4_basics\\public\\index.php')
+CRITICAL - 2025-07-29 11:06:45 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: No database selected
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `data`
+FROM `ci_sessions`
+WHERE `id` = \'ci_session:d773d2ab5c76a9a537804350dcd0cf5b\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `data`
+FROM `ci_sessions`
+WHERE `id` = \'ci_session:d773d2ab5c76a9a537804350dcd0cf5b\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `data`
+FROM `ci_sessions`
+WHERE `id` = :id:', [...], false)
+ 4 SYSTEMPATH\Session\Handlers\DatabaseHandler.php(135): CodeIgniter\Database\BaseBuilder->get()
+ 5 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->read('d773d2ab5c76a9a537804350dcd0cf5b')
+ 6 SYSTEMPATH\Session\Session.php(912): session_start()
+ 7 SYSTEMPATH\Session\Session.php(243): CodeIgniter\Session\Session->startSession()
+ 8 SYSTEMPATH\Config\Services.php(710): CodeIgniter\Session\Session->start()
+ 9 SYSTEMPATH\Config\BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+10 SYSTEMPATH\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+11 SYSTEMPATH\Config\Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+12 SYSTEMPATH\Config\BaseService.php(321): CodeIgniter\Config\Services::session()
+13 SYSTEMPATH\Config\BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic('session', [])
+14 SYSTEMPATH\Common.php(1000): CodeIgniter\Config\BaseService::get('session')
+15 SYSTEMPATH\Common.php(973): service('session')
+16 APPPATH\Controllers\BaseController.php(57): session()
+17 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+18 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+19 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+20 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+21 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+22 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+23 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\codeigniter4_basics\\public\\index.php')
+CRITICAL - 2025-07-29 11:06:45 --> [Caused by] mysqli_sql_exception: No database selected
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `data`
+FROM `ci_sessions`
+WHERE `id` = \'ci_session:d773d2ab5c76a9a537804350dcd0cf5b\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `data`
+FROM `ci_sessions`
+WHERE `id` = \'ci_session:d773d2ab5c76a9a537804350dcd0cf5b\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `data`
+FROM `ci_sessions`
+WHERE `id` = \'ci_session:d773d2ab5c76a9a537804350dcd0cf5b\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `data`
+FROM `ci_sessions`
+WHERE `id` = :id:', [...], false)
+ 5 SYSTEMPATH\Session\Handlers\DatabaseHandler.php(135): CodeIgniter\Database\BaseBuilder->get()
+ 6 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->read('d773d2ab5c76a9a537804350dcd0cf5b')
+ 7 SYSTEMPATH\Session\Session.php(912): session_start()
+ 8 SYSTEMPATH\Session\Session.php(243): CodeIgniter\Session\Session->startSession()
+ 9 SYSTEMPATH\Config\Services.php(710): CodeIgniter\Session\Session->start()
+10 SYSTEMPATH\Config\BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+11 SYSTEMPATH\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+12 SYSTEMPATH\Config\Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+13 SYSTEMPATH\Config\BaseService.php(321): CodeIgniter\Config\Services::session()
+14 SYSTEMPATH\Config\BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic('session', [])
+15 SYSTEMPATH\Common.php(1000): CodeIgniter\Config\BaseService::get('session')
+16 SYSTEMPATH\Common.php(973): service('session')
+17 APPPATH\Controllers\BaseController.php(57): session()
+18 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+19 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+20 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+21 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+22 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+23 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+24 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\codeigniter4_basics\\public\\index.php')
+DEBUG - 2025-07-29 11:11:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:11:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:11:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:11:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:11:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:11:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:11:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:11:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:11:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:11:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:11:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:11:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:11:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:11:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:11:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:11:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:11:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:11:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:11:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:11:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:11:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:13:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:13:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:13:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:13:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:13:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:13:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:13:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:13:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:13:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:13:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:13:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:13:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:13:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:13:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:13:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:13:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:13:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:13:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:14:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:14:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:14:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:14:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:14:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:14:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:14:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:14:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:14:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:14:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:16:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:22:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:22:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:22:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:22:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:22:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:22:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:22:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:22:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:22:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:22:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:22:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:22:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:22:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:22:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:22:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:22:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:22:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:22:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:22:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 11:43:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+ERROR - 2025-07-29 15:25:57 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\codeigniter4_basics\system\Database\MySQLi\Connection.php:202
+Stack trace:
+#0 C:\xampp\htdocs\codeigniter4_basics\system\Database\MySQLi\Connection.php(202): mysqli->real_connect('localhost', 'root', '', 'parth', 3306, '', 0)
+#1 C:\xampp\htdocs\codeigniter4_basics\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\codeigniter4_basics\system\Session\Handlers\DatabaseHandler.php(100): CodeIgniter\Database\BaseConnection->initialize()
+#3 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->open('ci_sessions', 'ci_session')
+#4 C:\xampp\htdocs\codeigniter4_basics\system\Session\Session.php(912): session_start()
+#5 C:\xampp\htdocs\codeigniter4_basics\system\Session\Session.php(243): CodeIgniter\Session\Session->startSession()
+#6 C:\xampp\htdocs\codeigniter4_basics\system\Config\Services.php(710): CodeIgniter\Session\Session->start()
+#7 C:\xampp\htdocs\codeigniter4_basics\system\Config\BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+#8 C:\xampp\htdocs\codeigniter4_basics\system\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#9 C:\xampp\htdocs\codeigniter4_basics\system\Config\Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#10 C:\xampp\htdocs\codeigniter4_basics\system\Config\BaseService.php(321): CodeIgniter\Config\Services::session()
+#11 C:\xampp\htdocs\codeigniter4_basics\system\Config\BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#12 C:\xampp\htdocs\codeigniter4_basics\system\Common.php(1000): CodeIgniter\Config\BaseService::get('session')
+#13 C:\xampp\htdocs\codeigniter4_basics\system\Common.php(973): service('session')
+#14 C:\xampp\htdocs\codeigniter4_basics\app\Controllers\BaseController.php(57): session()
+#15 C:\xampp\htdocs\codeigniter4_basics\system\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#16 C:\xampp\htdocs\codeigniter4_basics\system\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+#17 C:\xampp\htdocs\codeigniter4_basics\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#18 C:\xampp\htdocs\codeigniter4_basics\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#19 C:\xampp\htdocs\codeigniter4_basics\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#20 C:\xampp\htdocs\codeigniter4_basics\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#21 C:\xampp\htdocs\codeigniter4_basics\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#22 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\codeigniter4_basics\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\codeigniter4_basics\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\codeigniter4_basics\system\Session\Handlers\DatabaseHandler.php(100): CodeIgniter\Database\BaseConnection->initialize()
+#2 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->open('ci_sessions', 'ci_session')
+#3 C:\xampp\htdocs\codeigniter4_basics\system\Session\Session.php(912): session_start()
+#4 C:\xampp\htdocs\codeigniter4_basics\system\Session\Session.php(243): CodeIgniter\Session\Session->startSession()
+#5 C:\xampp\htdocs\codeigniter4_basics\system\Config\Services.php(710): CodeIgniter\Session\Session->start()
+#6 C:\xampp\htdocs\codeigniter4_basics\system\Config\BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+#7 C:\xampp\htdocs\codeigniter4_basics\system\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#8 C:\xampp\htdocs\codeigniter4_basics\system\Config\Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#9 C:\xampp\htdocs\codeigniter4_basics\system\Config\BaseService.php(321): CodeIgniter\Config\Services::session()
+#10 C:\xampp\htdocs\codeigniter4_basics\system\Config\BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#11 C:\xampp\htdocs\codeigniter4_basics\system\Common.php(1000): CodeIgniter\Config\BaseService::get('session')
+#12 C:\xampp\htdocs\codeigniter4_basics\system\Common.php(973): service('session')
+#13 C:\xampp\htdocs\codeigniter4_basics\app\Controllers\BaseController.php(57): session()
+#14 C:\xampp\htdocs\codeigniter4_basics\system\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#15 C:\xampp\htdocs\codeigniter4_basics\system\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+#16 C:\xampp\htdocs\codeigniter4_basics\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#17 C:\xampp\htdocs\codeigniter4_basics\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#18 C:\xampp\htdocs\codeigniter4_basics\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#19 C:\xampp\htdocs\codeigniter4_basics\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#20 C:\xampp\htdocs\codeigniter4_basics\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#21 {main}
+CRITICAL - 2025-07-29 15:25:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Session\Handlers\DatabaseHandler.php(100): CodeIgniter\Database\BaseConnection->initialize()
+ 2 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->open('ci_sessions', 'ci_session')
+ 3 SYSTEMPATH\Session\Session.php(912): session_start()
+ 4 SYSTEMPATH\Session\Session.php(243): CodeIgniter\Session\Session->startSession()
+ 5 SYSTEMPATH\Config\Services.php(710): CodeIgniter\Session\Session->start()
+ 6 SYSTEMPATH\Config\BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+ 7 SYSTEMPATH\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 8 SYSTEMPATH\Config\Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 9 SYSTEMPATH\Config\BaseService.php(321): CodeIgniter\Config\Services::session()
+10 SYSTEMPATH\Config\BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic('session', [])
+11 SYSTEMPATH\Common.php(1000): CodeIgniter\Config\BaseService::get('session')
+12 SYSTEMPATH\Common.php(973): service('session')
+13 APPPATH\Controllers\BaseController.php(57): session()
+14 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+15 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+16 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+18 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+19 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+20 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\codeigniter4_basics\\public\\index.php')
+DEBUG - 2025-07-29 15:26:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 15:26:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 15:26:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 15:26:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 15:26:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 15:26:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 15:26:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 15:26:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 15:27:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 15:27:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 15:27:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 15:27:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 15:27:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 15:27:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 15:35:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 15:39:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 15:39:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 15:39:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 15:39:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-07-29 15:39:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.

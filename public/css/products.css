@@ -1,0 +1,670 @@
+body {
+  background-color: #f8f9fa;
+  padding-top: 0;
+}
+
+/* Override any Bootstrap table backgrounds */
+.table,
+.table * {
+  background-color: transparent !important;
+}
+
+/* Consistent font sizes */
+body {
+  font-size: 16px;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #fff;
+}
+
+.navbar-dark .navbar-nav .nav-link i {
+  margin-right: 5px;
+}
+
+.user-dropdown .dropdown-toggle::after {
+  vertical-align: middle;
+}
+
+.page-content {
+  padding: 20px 0;
+}
+
+.table-container {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+#productsTable {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#productsTable thead th {
+  border: none;
+  background-color: #f8f9fa;
+  color: #495057;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  padding: 15px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+#productsTable tbody tr {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  transition: transform 0.2s;
+  background-color: white;
+  margin-bottom: 8px;
+}
+
+#productsTable tbody tr:hover {
+  transform: translateY(-3px);
+  box-shadow: none;
+}
+
+#productsTable tbody td {
+  padding: 15px;
+  vertical-align: middle;
+  border: none;
+  font-size: 16px;
+  background-color: transparent;
+}
+
+#productsTable tbody tr td:first-child {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+#productsTable tbody tr td:last-child {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.table-container h4 {
+  margin-bottom: 20px;
+  color: #343a40;
+  font-weight: bold;
+}
+
+.navbar {
+  background-color: #343a40;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: #198754;
+}
+
+.user-dropdown img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.search-box {
+  max-width: 300px;
+}
+
+.product-img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.product-img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.category-badge {
+  font-size: 0.85rem;
+}
+
+.price-display {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #198754;
+}
+
+.badge {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0.5em 1em;
+  border-radius: 50rem;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tab-content {
+  padding: 20px 0;
+}
+
+.btn-add-product {
+  background: linear-gradient(45deg, #28a745, #20c997);
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 10px 25px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.btn-add-product:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(40, 167, 69, 0.4);
+  color: white;
+}
+
+.modal-header {
+  background: linear-gradient(45deg, #343a40, #495057);
+  color: white;
+}
+
+.form-control:focus {
+  border-color: #28a745;
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+.table th {
+  background-color: #f8f9fa;
+  border-top: none;
+  font-weight: 600;
+  color: #495057;
+}
+
+.action-buttons .btn {
+  margin: 0 2px;
+}
+
+/* New styles for product table */
+#productsTable {
+  border-collapse: separate;
+  border-spacing: 0 8px;
+}
+
+#productsTable thead th {
+  border: none;
+  font-weight: 700;
+  color: #495057;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+#productsTable tbody tr {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+#productsTable tbody tr:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#productsTable tbody td {
+  padding: 15px 10px;
+  vertical-align: middle;
+  border: none;
+  background-color: white;
+}
+
+#productsTable tbody td:first-child {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+#productsTable tbody td:last-child {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.product-image-preview {
+  max-width: 200px;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #dee2e6;
+}
+
+.loading-spinner {
+  display: none;
+  text-align: center;
+  padding: 20px;
+}
+
+.alert {
+  border-radius: 10px;
+  border: none;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #aaa;
+  padding: 12px;
+  font-size: 16px;
+
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* બધા input boxes માટે default size બદલો */
+.form-control {
+  height: 50px;
+  /* box height */
+  font-size: 18px;
+  /* text size */
+  padding: 10px 15px;
+  /* inside spacing */
+}
+
+/* ✅ Click/focus પર green effect override (Bootstrap fix) */
+.form-control:focus {
+  border-color: green !important;
+  box-shadow: 0px 0px 6px rgba(0, 128, 0, 0.5) !important;
+  outline: none !important;
+}
+
+/* ✅ Hover પર green effect */
+.form-control:hover {
+  border-color: green !important;
+  box-shadow: 0px 0px 6px rgba(0, 128, 0, 0.5) !important;
+}
+
+.form-select {
+  height: 50px;
+  /* box height */
+  font-size: 18px;
+  /* text size */
+  padding: 10px 15px;
+  /* inside spacing */
+  border-radius: 8px;
+  border: 1px solid #aaa;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.form-select:focus {
+  border-color: green !important;
+  box-shadow: 0px 0px 6px rgba(0, 128, 0, 0.5) !important;
+  outline: none !important;
+}
+
+.form-select:hover {
+  border-color: green !important;
+  box-shadow: 0px 0px 6px rgba(0, 128, 0, 0.5) !important;
+}
+
+#productsTable thead {
+  background-color: #f1f5f9 !important;
+  /* Fixed header background */
+  font-weight: bold !important;
+}
+
+body {
+  background-color: #f8f9fa;
+  padding-top: 0;
+}
+
+/* Override any Bootstrap table backgrounds */
+.table,
+.table * {
+  background-color: transparent !important;
+}
+
+/* Consistent font sizes */
+body {
+  font-size: 16px;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #fff;
+}
+
+.navbar-dark .navbar-nav .nav-link i {
+  margin-right: 5px;
+}
+
+.user-dropdown .dropdown-toggle::after {
+  vertical-align: middle;
+}
+
+.page-content {
+  padding: 20px 0;
+}
+
+.table-container {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+/* Modern Table Styling */
+#productsTable {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#productsTable thead th {
+  border: none;
+  background-color: #f8f9fa;
+  color: #495057;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  padding: 15px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+#productsTable tbody tr {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  transition: transform 0.2s;
+  background-color: white;
+  margin-bottom: 8px;
+}
+
+#productsTable tbody tr:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#productsTable tbody td {
+  padding: 15px;
+  vertical-align: middle;
+  border: none;
+  font-size: 16px;
+  background-color: transparent;
+}
+
+#productsTable tbody tr td:first-child {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+#productsTable tbody tr td:last-child {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.table-container h4 {
+  margin-bottom: 20px;
+  color: #343a40;
+  font-weight: bold;
+}
+
+.navbar {
+  background-color: #343a40;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: #198754;
+}
+
+.user-dropdown img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.search-box {
+  max-width: 300px;
+}
+
+.product-img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.product-img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.category-badge {
+  font-size: 0.85rem;
+}
+
+.price-display {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #198754;
+}
+
+.badge {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0.5em 1em;
+  border-radius: 50rem;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tab-content {
+  padding: 20px 0;
+}
+
+.btn-primary {
+  background-color: #0d6efd;
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-danger:hover {
+  background-color: #bb2d3b;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(220, 53, 69, 0.3);
+}
+
+.btn-add-product {
+  background-color: #198754;
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 10px 25px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-add-product:hover {
+  background-color: #157347;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(25, 135, 84, 0.3);
+  color: white;
+}
+
+.modal-header {
+  background: linear-gradient(45deg, #343a40, #495057);
+  color: white;
+}
+
+.form-select {
+  height: 48px;
+  font-size: 16px;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  transition: all 0.3s ease;
+  background-position: right 15px center;
+}
+
+.form-select:focus,
+.form-select:hover {
+  border-color: #28a745;
+  box-shadow: 0 0 0 0.25rem rgba(40, 167, 69, 0.25);
+  outline: none;
+}
+
+.table th {
+  background-color: #f8f9fa;
+  border-top: none;
+  font-weight: 600;
+  color: #495057;
+}
+
+.action-buttons .btn {
+  margin: 0 2px;
+}
+
+.btn-outline-primary:hover {
+  color: #0d6efd;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
+  background-color: transparent;
+}
+
+.btn-outline-danger:hover {
+  color: #dc3545;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(220, 53, 69, 0.3);
+  background-color: transparent;
+}
+
+er {
+  display: none;
+  text-align: center;
+  padding: 20px;
+}
+
+.alert {
+  border-radius: 12px;
+  border: none;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.alert-success {
+  background-color: #d1e7dd;
+  color: #0f5132;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  color: #842029;
+}
+
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  padding: 12px 15px;
+  font-size: 16px;
+  height: 48px;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus,
+.form-control:hover {
+  border-color: #28a745;
+  box-shadow: 0 0 0 0.25rem rgba(40, 167, 69, 0.25);
+  outline: none;
+}
+
+/* ✅ Hover પર green effect */
+.form-control:hover {
+  border-color: green !important;
+  box-shadow: 0px 0px 6px rgba(0, 128, 0, 0.5) !important;
+}
+
+.form-select {
+  height: 50px;
+  /* box height */
+  font-size: 18px;
+  /* text size */
+  padding: 10px 15px;
+  /* inside spacing */
+  border-radius: 8px;
+  border: 1px solid #aaa;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.form-select:focus {
+  border-color: green !important;
+  box-shadow: 0px 0px 6px rgba(0, 128, 0, 0.5) !important;
+  outline: none !important;
+}
+
+.form-select:hover {
+  border-color: green !important;
+  box-shadow: 0px 0px 6px rgba(0, 128, 0, 0.5) !important;
+}
+
+#productsTable thead {
+  background-color: #f1f5f9 !important;
+  /* Fixed header background */
+  font-weight: bold !important;
+}
