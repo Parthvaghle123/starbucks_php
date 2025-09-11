@@ -15,17 +15,17 @@
         }
 
         .login-container {
-            max-width: 400px;
-            margin: 45px auto;
+            max-width: 380px;
+            margin: 20px auto;
             padding: 30px;
             background-color: #fff;
-            border-radius: 10px;
+            border-radius: 40px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         }
 
         .login-header {
             text-align: center;
-            margin-bottom: 30px;
+            /* margin-bottom: 30px; */
         }
 
         .login-header h2 {
@@ -83,6 +83,11 @@
             font-weight: 600;
             color: #4e4b4bff !important;
         }
+
+        .i {
+            width: "160px";
+            height: "160px";
+        }
     </style>
 </head>
 
@@ -90,8 +95,11 @@
     <div class="container">
         <div class="login-container">
             <div class="login-header">
-                <i class="fas fa-user-shield login-icon"></i>
+                <i class="fas fa-shield-alt text-white fs-3 bg-success rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width:60px; height:60px; "></i>
                 <h2 class="h2">Admin Login</h2>
+                <p class="text-muted small fw-bold">
+                    Access your admin dashboard
+                </p>
             </div>
 
             <?php if (session()->getFlashdata('error')): ?>
@@ -123,6 +131,11 @@
                 </div>
                 <button type="submit" class="btn btn-login btn-success">Login</button>
             </form>
+            <div class="text-center mt-3">
+                <small class="text-muted fw-bold">
+                    Secure admin access only
+                </small>
+            </div>
         </div>
     </div>
 
