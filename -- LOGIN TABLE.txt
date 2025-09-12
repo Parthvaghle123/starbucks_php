@@ -1,0 +1,87 @@
+CREATE TABLE `ci_sessions` (
+  `id` varchar(128) NOT NULL,
+  `ip_address` varchar(45) NOT NULL,
+  `timestamp` int(10) unsigned DEFAULT 0 NOT NULL,
+  `data` blob NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `ci_sessions_timestamp` (`timestamp`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+CREATE TABLE login (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(100) NOT NULL UNIQUE,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
+);ALTER TABLE `login` ADD `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP;
+
+
+-- SIGN TABLE
+CREATE TABLE sign (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(100) NOT NULL,
+    email VARCHAR(100),
+    phone VARCHAR(20),
+    gender VARCHAR(10),
+age int(3),
+    dob DATE,
+    address TEXT,
+
+    -- ✅ Foreign key relation to login(username)
+    FOREIGN KEY (username) REFERENCES login(username) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+-- ORDER_MANAGER TABLE
+CREATE TABLE order_manager (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    Email VARCHAR(100),
+    Phone VARCHAR(20),
+    Address TEXT,
+    Pay_Mode VARCHAR(50),
+    username VARCHAR(100),
+    Card_Number VARCHAR(20),
+    CVV VARCHAR(10),
+    Card_Expiry VARCHAR(10),
+    Date DATE,
+    Status VARCHAR(20) DEFAULT 'Approved',
+
+    FOREIGN KEY (username) REFERENCES login(username)
+);
+
+ALTER TABLE order_manager ADD Reason TEXT;
+
+
+-- USER_ORDER TABLE
+CREATE TABLE user_order (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    Order_Id INT,
+    Item_Name VARCHAR(255),
+    Price INT,
+    Quantity INT,
+    Status VARCHAR(50),
+
+    FOREIGN KEY (Order_Id) REFERENCES order_manager(id)
+);
+
+CREATE TABLE IF NOT EXISTS `admin` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+INSERT INTO `admin` (`username`, `email`, `password`) VALUES
+('admin', 'admin@example.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi');
+
+CREATE TABLE products (
+  id int(11) unsigned NOT NULL AUTO_INCREMENT,
+  name varchar(255) NOT NULL,
+  description text DEFAULT NULL,
+  price decimal(10,2) NOT NULL,
+  image varchar(255) DEFAULT NULL,
+  category varchar(100) DEFAULT NULL,
+  page enum('menu','gift') NOT NULL DEFAULT 'menu',
+  created_at datetime DEFAULT NULL,
+  updated_at datetime DEFAULT NULL,
+  PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
