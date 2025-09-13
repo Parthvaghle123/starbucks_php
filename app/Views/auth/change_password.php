@@ -107,7 +107,7 @@
 <body>
   <div class="container d-flex justify-content-center align-items-center vh-100">
     <div class="login-container m-auto">
-      <h3 class="text-center text-success h2 mb-3 fw-bold fs-4">Change Password</h3>
+      <h3 class="text-center text-success h2 mb-3 fw-bold ">Change Password</h3>
       <div id="alert" class="d-none"></div>
       <hr>
 

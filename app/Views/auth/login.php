@@ -94,7 +94,7 @@
 <body>
   <div class="container d-flex justify-content-center align-items-center vh-100">
     <div class="login-container">
-      <h2 class="text-success h2 mb-4 fw-bold fs-3 text-center">Login</h2>
+      <h2 class="text-success h2 mb-4 fw-bold  text-center">Login</h2>
       <hr>
 
       <form method="POST" action="/loginAuth">
