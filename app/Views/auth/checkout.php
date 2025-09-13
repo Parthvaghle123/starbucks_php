@@ -14,11 +14,11 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 30px;
+            /* margin: 30px; */
         }
 
         .checkout-card {
-            max-width: 420px;
+            max-width: 600px;
             width: 100%;
             background: white;
             padding: 25px 20px;
@@ -94,61 +94,65 @@
             border-color: green !important;
             box-shadow: 0px 0px 6px rgba(0, 128, 0, 0.5) !important;
         }
-        .checkout-title{
-            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+
+        .checkout-title {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
-        .checkout-subtitle{
-            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+        .checkout-subtitle {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
     </style>
 </head>
 
 <body>
     <div class="checkout-card border-0 p-4 rounded-4 mt-5 ">
-        <h1 class="fs-3 text-success text-center fw-bold checkout-title">StarPay</h1>
+        <h1 class="fs-3 text-success text-center fw-bold checkout-title">Payment</h1>
         <p class="text-success fw-bold text-center checkout-subtitle">Brew & Pay • Easy Checkout</p>
         <hr />
         <?php if (!empty($_SESSION['cart'])) { ?>
             <form method="post" action="<?= base_url('/place-order') ?>" onsubmit="return validateForm();">
-                <div class="mb-3">
-                    <label class="mb-2 l1">Email ID</label>
-                    <input type="email" class="form-control" name="email" value="<?= esc($user['email']) ?>" readonly required>
-                </div>
-
-                <div class="mb-3">
-                    <label class="mb-2 l1">Phone Number</label>
-                    <div class="input-group">
-                        <select class="form-select" name="country_code" style="max-width: 100px;" disabled>
-                            <option value="+91" selected>+91 🇮🇳</option>
-                        </select>
-                        <input type="hidden" name="country_code" value="+91">
-                        <input type="tel" class="form-control" name="phone" id="phone" pattern="[0-9]{10}"
-                            value="<?= esc(substr($user['phone'],0)) ?>" readonly required>
+                <div class="mb-3 d-flex flex-column flex-sm-row gap-3">
+                    <div class="d-flex flex-column flex-fill">
+                        <label class="mb-2 l1">Email ID</label>
+                        <input type="email" class="form-control" name="email" value="<?= esc($user['email']) ?>" readonly required>
+                    </div>
+                    <div class="d-flex flex-column flex-fill">
+                        <label class="mb-2 l1">Phone Number</label>
+                        <div class="input-group">
+                            <select class="form-select" name="country_code" style="max-width: 100px;" disabled>
+                                <option value="+91" selected>+91 🇮🇳</option>
+                            </select>
+                            <input type="hidden" name="country_code" value="+91">
+                            <input type="tel" class="form-control" name="phone" id="phone" pattern="[0-9]{10}"
+                                value="<?= esc(substr($user['phone'], 0)) ?>" readonly required>
+                        </div>
                     </div>
                 </div>
-
                 <div class="mb-3">
                     <label class="mb-2 l1">Shipping Address</label>
                     <textarea class="form-control" name="address" rows="2" placeholder="Enter your address"
                         style="resize: none; height: 100px;" required></textarea>
                 </div>
 
-                <div class="mb-3">
+                <div class="mb-2">
                     <label class="l1 mb-2">Payment Method</label>
-                    <div class="form-check">
-                        <input class="form-check-input " type="radio" name="pay_mode" id="cod" value="COD" onchange="toggleCardBox()" required>
-                        <label class="form-check-label l1" for="cod">Cash on Delivery</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="pay_mode" id="online" value="Online" onchange="toggleCardBox()">
-                        <label class="form-check-label l1" for="online">Online Payment</label>
+                    <div class="mb-2 d-flex flex-column flex-sm-row gap-3">
+                        <div class=" flex-column flex-fill">
+                            <input class="form-check-input " type="radio" name="pay_mode" id="cod" value="COD" onchange="toggleCardBox()" required>
+                            <label class="form-check-label l1" for="cod">Cash on Delivery</label>
+                        </div>
+                        <div class=" flex-column flex-fill">
+                            <input class="form-check-input" type="radio" name="pay_mode" id="online" value="Online" onchange="toggleCardBox()">
+                            <label class="form-check-label l1 me-5" for="online">Online Payment</label>
+                        </div>
                     </div>
                 </div>
 
                 <div id="card-box">
-                    <h6 class="l1">Card Details</h6>
+                    <h6 class="l1 fw-bold">Card Details : </h6>
                     <div class="mb-3">
-                        <label class="mb-2 l1">Card Number</label>
+                        <label class="mb-2 l1 ">Card Number</label>
                         <input type="text" class="form-control" id="card_number" name="card_number" placeholder="1234 5678 9012 3456">
                     </div>
                     <div class="row">
@@ -182,14 +186,33 @@
                 let expiry = $('#expiry').val();
                 let cvv = $('#cvv').val();
 
+                // Card number check
                 if (card.length !== 16 || isNaN(card)) {
                     alert("Invalid card number.");
                     return false;
                 }
+
+                // Expiry date format check (MM/YY)
                 if (!/^(0[1-9]|1[0-2])\/\d{2}$/.test(expiry)) {
-                    alert("Invalid expiry date.");
+                    alert("Invalid expiry date format (MM/YY).");
                     return false;
                 }
+
+                // Expiry future check
+                let parts = expiry.split('/');
+                let expMonth = parseInt(parts[0], 10);
+                let expYear = parseInt("20" + parts[1], 10);
+
+                let today = new Date();
+                let thisMonth = today.getMonth() + 1; // 0-11, so +1
+                let thisYear = today.getFullYear();
+
+                if (expYear < thisYear || (expYear === thisYear && expMonth < thisMonth)) {
+                    alert("Card is expired.");
+                    return false;
+                }
+
+                // CVV check
                 if (cvv.length < 3 || cvv.length > 4 || isNaN(cvv)) {
                     alert("Invalid CVV.");
                     return false;
@@ -197,6 +220,7 @@
             }
             return true;
         }
+
 
         // Auto-formatting
         $('#card_number').on('input', function() {
