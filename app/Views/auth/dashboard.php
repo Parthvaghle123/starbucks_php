@@ -214,7 +214,8 @@ $base_url = base_url('manage_cart');
         <img src="https://preprodtsbstorage.blob.core.windows.net/cms/uploads/ICW_Live_Event_Day5_41f11ca3d2.jpg" class="card-img" height="400px">
         <div class="card-img-overlay" style="background-color: rgba(0, 0, 0, 0.5);">
           <h5 class="card-title fs-4 ms-4 fst-italic">Art & Science Of Coffee Brewing</h5>
-          <p class="card-text ms-4 fst-italic">Master the perfect brew with Starbucks!</p>
+          <p class="card-text ms-4 fst-italic"> Master the perfect brew with starbucks! Learn the art and
+            science of coffee brewing.</p>
         </div>
       </div>
     </div>

@@ -100,3 +100,4 @@ in SYSTEMPATH\Database\BaseConnection.php on line 467.
 20 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\codeigniter4\\public\\index.php')
 DEBUG - 2025-09-20 15:46:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
 DEBUG - 2025-09-20 15:46:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-09-20 15:49:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
