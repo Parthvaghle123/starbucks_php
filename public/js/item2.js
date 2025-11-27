@@ -7,36 +7,34 @@ document.addEventListener("DOMContentLoaded", () => {
   const messageBox = document.getElementById("messageBox");
   const rootElement = document.getElementById("root1");
 
-  // Load products from database on page load
+ // Load products from database on page load
   loadProductsFromDatabase();
 
-  // Function to load products from database
   function loadProductsFromDatabase() {
     messageBox.style.display = "block";
+    messageBox.className = "alert alert-success"; // Loading message in blue
     messageBox.textContent = "Loading products...";
-    
-    fetch('/api/products/menu')
-      .then(response => response.json())
-      .then(data => {
-        if (data.error) {
-          throw new Error(data.message || 'Failed to load products');
-        }
-        products = data;
-        displayItems(products);
-        messageBox.style.display = "none";
-      })
-      .catch(error => {
-        console.error('Error loading products:', error);
-        messageBox.textContent = "Error loading products. Using fallback data.";
-        messageBox.style.display = "block";
-        
-        // Fallback to static data if API fails
-        setTimeout(() => {
-          loadFallbackProducts();
-        }, 2000);
-      });
-  }
 
+    setTimeout(() => {
+      fetch("/api/products/menu")
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.error)
+            throw new Error(data.message || "Failed to load products");
+          products = data;
+          displayItems(products);
+        })
+        .catch((error) => {
+          console.error("Error loading products:", error);
+          messageBox.textContent =
+            "Error loading products. Using fallback data.";
+          messageBox.className = "alert alert-warning"; // fallback warning
+          setTimeout(() => {
+            loadFallbackProducts();
+          }, 1000);
+        });
+    }, 400);
+  }
   // Fallback function with static products if API fails
   function loadFallbackProducts() {
     products = [
@@ -94,15 +92,17 @@ document.addEventListener("DOMContentLoaded", () => {
     messageBox.style.display = "none";
   }
 
-  // 🔍 Search logic with 2-second delay (simulation)
+
   function searchProducts(event) {
     if (event) event.preventDefault();
-    messageBox.style.display = "block"; // Show "Searching..." message
-    rootElement.innerHTML = ""; // Clear old results
+    messageBox.style.display = "block";
+    messageBox.className = "alert alert-warning"; // Searching message yellow
+    messageBox.textContent = "Searching...";
+    rootElement.innerHTML = "";
+
     setTimeout(() => {
-      filterAndDisplayItems(); // Filter after delay
-      messageBox.style.display = "none"; // Hide message
-    }, 2000);
+      filterAndDisplayItems();
+    }, 1000); // simulate delay
   }
 
   const filterAndDisplayItems = () => {
@@ -113,107 +113,90 @@ document.addEventListener("DOMContentLoaded", () => {
     displayItems(filteredData);
   };
 
-  // Search input clearing logic
   searchInput.addEventListener("input", () => {
     if (searchInput.value === "") {
       displayItems(products);
     }
   });
 
-  // Search button click event
   searchButton.addEventListener("click", searchProducts);
 
-  // Enter key press event
   searchInput.addEventListener("keypress", (event) => {
-    if (event.key === "Enter") {
-      searchProducts();
-    }
+    if (event.key === "Enter") searchProducts();
   });
-
   const displayItems = (items) => {
     rootElement.innerHTML = "";
+
+    if (!items || items.length === 0) {
+      messageBox.style.display = "block";
+      messageBox.className = "alert alert-danger"; // ✅ FIXED
+      messageBox.textContent = "No products found ";
+      return;
+    }
+
+    messageBox.style.display = "none";
+    messageBox.className = "";
+
     items.forEach((item) => {
       const div = document.createElement("div");
       div.classList.add("products");
       div.innerHTML = `
-       <div class='box'>
-        <div class='img-box'>
-          <img class='img' src="${item.image}" alt="${item.title}">
+        <div class='box'>
+          <div class='img-box'>
+            <img class='img' src="${item.image}" alt="${item.title}">
+          </div>
+          <div class='bottom'>
+            <h2>${item.title}</h2>
+            <h4>${item.per}</h4>
+            <h3>₹${item.price}.00</h3>
+            <button class="btn3 btn btn-success" onclick="addToCart('${item.title}', ${item.price}, '${item.image}')">
+              Add Item
+            </button>
+          </div>
         </div>
-        <div class='bottom'>
-          <h2>${item.title}</h2>
-          <h4>${item.per}</h4>
-          <h3>₹${item.price}.00</h3>
-          <input type="hidden" name="Item_Name" value="${item.title}">
-          <input type="hidden" name="Price" value="${item.price}">
-          <input type="hidden" name="Item_Image" value="${item.image}">
-        <button class="btn3 btn btn-success " onclick="addToCart('${item.title}', ${item.price}, '${item.image}')">
-            Add Item
-          </button>        </div>
-      </div>
       `;
       rootElement.appendChild(div);
     });
   };
-
-  // Initial display
-  if (products.length > 0) {
-    displayItems(products);
-  }
 });
 
-// Global function to add items to cart
+// --------------------- ADD TO CART ---------------------
 function addToCart(itemName, itemPrice, itemImage) {
   const formData = new FormData();
-  formData.append('Item_Name', itemName);
-  formData.append('Price', itemPrice);
-  formData.append('Item_Image', itemImage);
+  formData.append("Item_Name", itemName);
+  formData.append("Price", itemPrice);
+  formData.append("Item_Image", itemImage);
 
-  fetch('/manage_cart', {
-    method: 'POST',
-    body: formData
+  fetch("/manage_cart", {
+    method: "POST",
+    body: formData,
   })
-  .then(response => response.json())
-  .then(data => {
-    if (data.status === 'success') {
-      // Update cart count in header
-      const cartCountElement = document.querySelector('.cart-count');
-      if (cartCountElement) {
-        cartCountElement.textContent = data.count;
+    .then((response) => response.json())
+    .then((data) => {
+      if (data.status === "success") {
+        const cartCountElement = document.querySelector(".cart-count");
+        if (cartCountElement) cartCountElement.textContent = data.count;
+        showPopup(`${itemName} added to cart`, "success");
+      } else {
+        showPopup("Failed to add item to cart", "error");
       }
-      
-      // Show success message
-        showPopup(`${itemName} added to cart `, "success");
-    } else {
-      showPopup('Failed to add item to cart', 'error');
-    }
-  })
-  .catch(error => {
-    console.error('Error adding to cart:', error);
-    showPopup('Error adding item to cart', 'error');
-  });
+    })
+    .catch((error) => {
+      console.error("Error adding to cart:", error);
+      showPopup("Error adding item to cart", "error");
+    });
 }
 
-
+// --------------------- POPUP MESSAGE ---------------------
 function showPopup(message, type) {
   const popup = document.getElementById("popup");
   if (!popup) return;
 
-  // message મૂકવું
-  popup.innerHTML = `
-    <div class="text-white">
-      ${message}
-    </div>
-  `;
-
-  // પહેલા થી hide class કાઢી નાખો
+  popup.innerHTML = `<div class="text-white">${message}</div>`;
   popup.classList.remove("hide");
-  popup.classList.add("show"); // show class add કરો
+  popup.classList.add("show");
 
-  // 3 second પછી auto-hide
-  setTimeout(() => {
-    closePopup();
-  }, 3000);
+  setTimeout(closePopup, 3000);
 }
 
 function closePopup() {
@@ -222,7 +205,7 @@ function closePopup() {
     popup.classList.remove("show");
     popup.classList.add("hide");
     setTimeout(() => {
-      popup.style.display = "none"; // remove after animation
+      popup.style.display = "none";
     }, 500);
   }
 }

@@ -186,3 +186,29 @@ footer a.text-white:hover {
   opacity: 0;
   transform: translate(-50%, -50%) scale(0.9); /* zoom out */
 }
+#messageBox {
+  color: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  text-align: center; /* લખાણ center */
+  font-weight: bold;
+  width: fit-content;
+  margin: 20px auto 10px auto; /* top = 20px, bottom = 10px, horizontally center */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  animation: fadeInOut 1.5s ease infinite;
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+
+.alert-success{
+  background-color: #198754;
+}
+.alert-danger{
+  background-color: #e7414c;
+}
+.alert-warning{
+  background-color: #198754;
+}

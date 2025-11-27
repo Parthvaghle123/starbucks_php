@@ -10,7 +10,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="<?= base_url('css/user.css') ?>">
-    <link rel="stylesheet" href="<?= base_url('css/products.css') ?>">  
+    <link rel="stylesheet" href="<?= base_url('css/products.css') ?>">
 </head>
 
 <body>
@@ -538,12 +538,15 @@
             const rows = document.querySelectorAll("#productsTableBody tr");
 
             rows.forEach(row => {
-                const text = row.innerText.toLowerCase();
-                const matchesSearch = text.includes(term);
+                // ફક્ત product name column જ લો
+                const nameCell = row.querySelector("td:first-child .fw-bold");
+                const productName = nameCell ? nameCell.innerText.toLowerCase() : "";
+
+                const matchesSearch = productName.includes(term);
 
                 let matchesStatus = true;
                 if (status !== "All Status") {
-                    matchesStatus = text.includes(status.toLowerCase());
+                    matchesStatus = row.innerText.toLowerCase().includes(status.toLowerCase());
                 }
 
                 if (matchesSearch && matchesStatus) {

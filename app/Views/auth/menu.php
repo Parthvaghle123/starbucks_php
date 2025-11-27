@@ -141,12 +141,12 @@ $base_url = base_url('manage_cart');
   <!-- ✅ Animated Hero Section -->
   <div class="Herosection_1">
     <div class="container">
-      <div id="messageBox" style="display: none; text-align: center; margin: 20px 0;">
-        <div style="display: inline-flex; align-items: center; gap: 10px;">
-          <div class="spinner"></div>
-          <p style="margin: 0; font-weight: bold; color: black;" class="fs-5 fst-italic">Please wait...</p>
+      <div id="messageBox" style="display: none;">
+          <div style="display: inline-flex; align-items: center; gap: 10px;">
+            <div class="spinner"></div>
+            <p style=" font-weight: bold;" class="fs-5 fst-italic">Loading products..."</p>
+          </div>
         </div>
-      </div>
       <div id="root1"></div>
     </div>
   </div>
