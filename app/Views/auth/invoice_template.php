@@ -357,7 +357,7 @@
         <div class="company-info">
             <p>123 Coffee Street, Seattle WA 98101</p>
             <p>Phone: 1-800-STARBUCKS</p>
-            <p>www.starbucks.com</p>
+            <p>http://client-ochre-tau.vercel.app/</p>
         </div>
 
         <div class="invoice-details">

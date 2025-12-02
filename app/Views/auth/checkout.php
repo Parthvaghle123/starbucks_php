@@ -20,7 +20,7 @@
   </style>
 </head>
 <body>
-  <div class="checkout-card border-0 p-4 rounded-4 mt-5">
+  <div class="checkout-card border-0 p-4 rounded-4">
     <h1 class="fs-3 text-success text-center fw-bold checkout-title">Payment</h1>
     <p class="text-success fw-bold text-center checkout-subtitle">Brew & Pay • Easy Checkout</p>
     <hr />

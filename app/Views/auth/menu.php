@@ -100,7 +100,7 @@ $base_url = base_url('manage_cart');
         </ul>
 
         <form class="d-flex me-4" onsubmit="event.preventDefault(); searchProducts();">
-          <input class="me-2 search bg-light w-100 head" type="search" placeholder="Search" aria-label="Search" id="search" />
+          <input class="me-2 search bg-light w-100 head" type="search" placeholder="Search" aria-label="Search" id="search" autocomplete="off" />
           <button id="searchButton" class="btn1 btn btn-success" type="submit">
             <i class="fa-solid fa-magnifying-glass"></i>
           </button>
